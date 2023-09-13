@@ -7,12 +7,16 @@ body {
 a, a:hover {
   color: #505050 !important;
 }
-button, button:hover {
+.btn, .btn:hover {
   background-color: #505050 !important;
 }
 .footer-link {
   text-decoration: none !important;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
 
 .vertical-center {
   position: absolute;

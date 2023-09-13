@@ -1,18 +1,9 @@
 import React from "react";
 import { Container, Navbar, Nav, NavLink } from 'react-bootstrap'
-import Logo from "../assets/logo.svg"
+import Logo from "../assets/logo.png"
 
 
-const menuData = [
-  {
-      path:'/about',
-      name: 'About'
-  },
-  {
-    path: '/contact',
-    name: 'Contact'
-},
-]
+
 
 export default function AppNavbar() {
   return (
@@ -31,18 +22,13 @@ export default function AppNavbar() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {
-                menuData.map((item)=>(
-                    <NavLink href={item.path} key={item.name}>
-                        <div>{item.name}</div>
-                    </NavLink>
-                ))
-            }        
+            <Nav.Link className="m-1" href='#portfolio'>Portfolio</Nav.Link>
+            <Nav.Link className="m-1" href='#contact'>Contact Me</Nav.Link>
           </Nav>
-          {/* <Nav>
+          <Nav>
             <Nav.Link className="m-1"><i class="fa-brands fa-facebook-f"></i></Nav.Link>
             <Nav.Link className="m-1"><i class="fa-brands fa-instagram"></i></Nav.Link>
-          </Nav> */}
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
