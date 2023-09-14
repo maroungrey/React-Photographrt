@@ -1,5 +1,5 @@
 import React from 'react'
-import Banner from '../assets/banner.jpg';
+import Banner from '../assets/banner.webp';
 
 export default function Hero() {
   return (

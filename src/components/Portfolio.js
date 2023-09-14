@@ -1,17 +1,17 @@
 import React from 'react';
 import { Container, Button } from 'react-bootstrap';
-import a1 from '../assets/a1.jpg';
-import a2 from '../assets/a2.jpg';
-import a3 from '../assets/a3.jpg';
-import a4 from '../assets/a4.jpg';
-import a5 from '../assets/a5.jpg';
-import a6 from '../assets/a6.jpg';
-import b1 from '../assets/b1.jpg';
-import b2 from '../assets/b2.jpg';
-import b3 from '../assets/b3.jpg';
-import b4 from '../assets/b4.jpg';
-import b5 from '../assets/b5.jpg';
-import b6 from '../assets/b6.jpg';
+import a1 from '../assets/a1.webp';
+import a2 from '../assets/a2.webp';
+import a3 from '../assets/a3.webp';
+import a4 from '../assets/a4.webp';
+import a5 from '../assets/a5.webp';
+import a6 from '../assets/a6.webp';
+import b1 from '../assets/b1.webp';
+import b2 from '../assets/b2.webp';
+import b3 from '../assets/b3.webp';
+import b4 from '../assets/b4.webp';
+import b5 from '../assets/b5.webp';
+import b6 from '../assets/b6.webp';
 
 
 export default function Portfolio() {

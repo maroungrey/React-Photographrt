@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
-import Banner2 from '../assets/banner-2.jpg'
+import Banner2 from '../assets/banner-2.webp'
 
 export default function Contact() {
   return (
