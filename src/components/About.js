@@ -1,23 +1,27 @@
 import React from 'react'
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
+import Photo from '../assets/about.webp'
 
 export default function About() {
   return (
     <section>
-    <Container>
-       
-        <div className='my-1'>
+        <div className='my-5 text-center'>
+        <h1 className='section-title'>About Me</h1>
+        <p className='section-subtitle'>My formal details</p>
+        </div>
+    <Container> 
             <Row>
-                <Col>
-                    <div className='mx-auto my-5 text-center'>
-                        <h1>About Me</h1>
-                        <div className="w-75 mx-auto">
-                            <p>Hello, I'm Trevor, a passionate photographer dedicated to capturing life's most captivating moments through the lens. With a keen eye for detail and a commitment to artistic excellence, I strive to create images that tell unique stories and evoke powerful emotions. Whether it's a candid shot in the midst of a bustling city or a breathtaking landscape in the great outdoors, I believe in the magic of photography to freeze time and preserve memories. Explore my portfolio to witness my journey and the world through my camera's perspective. Join me in celebrating the beauty of life one click at a time.</p>
-                        </div>
+                <Col sm={12} lg={6} className='d-flex align-items-center justify-content-center'>
+                    <Image src={Photo} fluid/>
+                </Col>
+                <Col sm={12} lg={6} className='d-flex align-items-center justify-content-center p-3'>
+                    <div className='about-text'>
+                        <h4 className="text-center text-lg-left services-title">I'm a Freelancer Front-end Developer with over 3 years of experience.</h4>
+                        <p className="about-me-description text-center text-lg-left">I'm a freelance web developer with 3 years of experience building custom websites. I have created multiple ecommerce sites using Magento 2, WordPress, React and Shopify, and am experienced with building non-ecommerce sites as well. Whether you need an online store built from scratch, your existing site rebuilt, or a completely custom web solution, I have the skills to make it happen. I'm available for hire to help businesses and individuals create the website they envision, no matter the industry or complexity. Let's work together to build your ideal web presence.</p>
+                        <a className='about-button' href='https://maroun-barqawi.tiiny.site/' target='_blank'><Button>View Resume</Button></a>
                     </div>
                 </Col>
             </Row>
-        </div>
     </Container>
 </section>
   )

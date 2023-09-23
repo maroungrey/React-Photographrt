@@ -1,36 +1,51 @@
 import React from "react";
-import { Container, Navbar, Nav, NavLink } from 'react-bootstrap'
-import Logo from "../assets/logo.png"
+import { Container, Navbar, Nav, NavLink, Image } from 'react-bootstrap'
+import Logo from "../assets/Logo.svg"
 
-
+const menuData = [
+  {
+      path:'#about',
+      name: 'About Me'
+  },
+  {
+      path:'#services',
+      name: 'Services'
+  },
+  {
+      path:'#portfolio',
+      name: 'Portfolio'
+  },
+  {
+    path: '#contact',
+    name: 'Contact Me'
+},
+]
 
 
 export default function AppNavbar() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href='/' className="me-auto">
-            {/* LOGO */}
-            <img
-              src={Logo}
-              width="190"
-              height="50"
-              className="d-inline-block align-top"
-              alt="Logo"
-            />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ms-auto">
-            <Nav.Link className="m-1" href='#portfolio'>Portfolio</Nav.Link>
-            <Nav.Link className="m-1" href='#contact'>Contact Me</Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link className="m-1"><i class="fa-brands fa-facebook-f"></i></Nav.Link>
-            <Nav.Link className="m-1"><i class="fa-brands fa-instagram"></i></Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <header id='header-wrapper'>
+    <div className="d-flex justify-content-center">
+      <Navbar.Brand href='/' className="mx-auto d-block my-3">
+        {/* LOGO */}
+        <Image
+          src={Logo}
+          className="w-100"
+          alt="Maroun Grey Logo"
+          fluid
+        />
+      </Navbar.Brand>
+    </div>
+
+    <div className="text-center" id="header-navbar">
+      {
+        menuData.map((item) => (
+          <NavLink className="d-inline-block" href={item.path} key={item.name}>
+            <div className="list_item fh-link px-2 py-1">{item.name}</div>
+          </NavLink>
+        ))
+      }
+    </div>
+  </header>
     );
 }
