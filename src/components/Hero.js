@@ -14,9 +14,9 @@ export default function Hero() {
           <Col sm={12} md={6} className='py-3 d-flex justify-content-center align-items-center text-center text-md-left'>
             <div className='w-100'>
               <div className='hero-icons py-2'>
-                <i className="fa-brands fa-linkedin fa-xl py-2 pe-3"></i>
-                <i className="fa-brands fa-github fa-xl py-2 pe-3"></i>
-                <i className="fa-brands fa-instagram fa-xl py-2 pe-3"></i>
+                <a href='https://www.linkedin.com/in/maroungrey/' target='_blank'><i className="fa-brands fa-linkedin fa-xl py-2 pe-3"></i></a>
+                <a href='https://github.com/maroungrey' target='_blank'><i className="fa-brands fa-github fa-xl py-2 pe-3"></i></a>
+                <a href='https://www.instagram.com/maroungrey/' target='_blank'><i className="fa-brands fa-instagram fa-xl py-2 pe-3"></i></a>
               </div>
               <div className='py-1'>
                 <h2 className='hero-text'>Hello, I'm <span id='maroun'>MAROUN</span></h2>
@@ -26,13 +26,13 @@ export default function Hero() {
                 <TypeAnimation
                     sequence={[
                       'Software Engineer',
-                      1000, 
+                      1500, 
                       'Full Stack Developer',
-                      1000,
+                      1500,
                       'E-Commerce Developer',
-                      1000,
+                      1500,
                       'Web Developer',
-                      1000,
+                      1500,
 
                   ]}
                   wrapper="span"
@@ -43,8 +43,8 @@ export default function Hero() {
               </div>
               <p className='hero-text'>Based in Los Angeles, California.</p>
               <div>
-                <a className='pe-3' href='#contact'><Button>Get in Touch</Button></a>
-                <a className='pe-3'href='#portfolio'><Button>View Portfolio</Button></a>
+                <a className='pe-3 button-red' href='#contact'><Button>Get in Touch</Button></a>
+                <a className='pe-3 button-red'href='#portfolio'><Button>View Portfolio</Button></a>
               </div>
             </div>
           </Col>

@@ -41,6 +41,17 @@ h1, h2, h3, h4, h5, h6 {
 #header-wrapper {
   margin-bottom: 30px;
 }
+.fa-brands {
+  color: #ffffff !important;
+}
+.fa-brands:hover {
+  -webkit-transform: scale(1.5);
+  transform: scale(1.2);
+}
+footer {
+  color: #eeeeee !important;
+  background-color: #000000;
+}
 .footer-container {
   position: absolute;
   bottom: 0;
@@ -177,8 +188,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 5px;
 }
 
-#services {
-  /* background-image: url("./assets/services-bg.png"); */
+#services-bg {
+  /* background: rgba(0,0,0,.45) url('./assets/bg2.jpg');
+  background-blend-mode: darken;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -189,8 +201,7 @@ h1, h2, h3, h4, h5, h6 {
   -o-background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-top: 3rem
+  justify-content: space-between; */
 }
 .services-card {
   border: solid 2px #505050;
@@ -212,40 +223,127 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
-/* #portfolio {
-  background-color:#890000;
-} */
+/* #services-bg {
+  background: url('./assets/bg2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 
-/* .portfolio-card {
-  border: solid 2px #505050;
-  transition-duration: .3s;  
-}
-.portfolio-card:hover {
-  box-shadow: #505050 5px 5px;
 } */
-.text {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+#portfolio-bg {
+  background: rgba(0,0,0,.45) url('./assets/bg1.jpg');
+  background-blend-mode: darken;
   height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #000000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.portfolio-card-wrap:hover .overlay{
-  opacity: .8;
+.portfolio-wrap {
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+
+.carousel-indicators [data-bs-target] {
+  background-color: #555555;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  display: none;
+}
+
+.contact-section {
+  background: rgba(0,0,0,.45) url('./assets/Banner.webp');
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.contact-bg {
+  background-color: #000000;
+  border-radius: 12px;
+  margin: auto;
+}
+
+@media screen and (min-width: 940px) {
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1100px
+  }
+}
+.email-image {
+  background: url('./assets/email.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  margin: auto;
+  width: 200px;
+}
+.contact-title {
+  color: #ffffff;
+  font-size: 2rem;
+  min-width: 300px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.contact-title h6 {
+  color: #727272;
+}
+.email-form {
+  background-color: #e6e6e6;
+  border-radius: 12px;
+  min-width: 300px;
+}
+
+.button-red button {
+  background-color: #890000 !important;
+  border-radius: 0;
+  box-shadow: #1e1e1e 5px 5px;
+  border: none;
+  transition: 0s background-color;
+}
+.button-red:hover button {
+  background-color: #1e1e1e !important;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transform: scale(1.05)
+  translateY(2px, 2px);
+  -webkit-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transition-delay:0.05s;
+  /* transition-delay:0.1s; */
+}
+.button-black {
+  background-color: #1e1e1e !important;
+  border-radius: 0;
+  box-shadow: #740000 5px 5px;
+  border: none;
+  transition: 0s background-color;
+  border-radius: 5px;
+}
+.button-black:hover {
+  background-color: #1e1e1e !important;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  transform: scale(1.05)
+  translateY(2px, 2px);
+  -webkit-transform: translate(2px, 2px);
+  -ms-transform: translate(2px, 2px);
+  transition-delay:0.05s;
+  border-radius: 5px;
+  /* transition-delay:0.1s; */
 }
