@@ -34,7 +34,7 @@ const servicesData = [
 
 export default function Services() {
   return (
-    <section id='#services'>   
+    <section id='services'>   
         <div className='text-center pt-5'>
           <h1 className='section-title'>Services</h1>
           <p className='section-subtitle'>What do I do</p>

@@ -248,6 +248,27 @@ footer {
   background-color: #eeeeee;
   border-radius: 10px;
 }
+.portfolio-image {
+  position: relative;
+  box-shadow: #505050 10px 10px;
+  border: #505050 2px solid;
+}
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.portfolio-image:hover .image-overlay {
+  opacity: 1;
+}
 
 
 .carousel-indicators [data-bs-target] {
@@ -257,6 +278,12 @@ footer {
 .carousel-control-prev-icon {
   display: none;
 }
+.testimonial-comment {
+  max-width: 500px;
+  margin: 0 3rem;
+}
+
+
 
 .contact-section {
   background: rgba(0,0,0,.45) url('./assets/Banner.webp');
