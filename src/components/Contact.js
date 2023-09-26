@@ -1,8 +1,57 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import emailjs from '@emailjs/browser';
 import { Container, Row, Col, Image, Button, Form } from 'react-bootstrap'
 import { TypeAnimation } from 'react-type-animation';
 
 export default function Contact() {
+
+        const recaptchaContainerRef = useRef(null);
+
+        useEffect(() => {
+        const loadReCaptcha = () => {
+            if (
+            recaptchaContainerRef.current &&
+            typeof window.grecaptcha !== "undefined"
+            ) {
+            const siteKey = "6Lcgo1MoAAAAAGdaCzpAt95F9Z3U-BRNnWBjlnfw";
+    
+            if (!recaptchaContainerRef.current.hasChildNodes()) {
+                window.grecaptcha.render(recaptchaContainerRef.current, {
+                sitekey: siteKey,
+                });
+            }
+            }
+        };
+    
+        if (typeof window.grecaptcha === "undefined") {
+            const script = document.createElement("script");
+            script.src =
+            "https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit";
+            script.async = true;
+            script.defer = true;
+            document.body.appendChild(script);
+    
+            window.onloadCallback = loadReCaptcha;
+        } else {
+            loadReCaptcha();
+        }
+        }, []);
+
+        const form = useRef();
+      
+        const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm('PortfolioSite', 'template_17uv9hh', form.current, 'DmkIqtFP9TZ2_6UAN')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            e.target.reset();
+        };
+
   return (
     <section id='contact'>
         <div className='mx-auto pt-5 text-center'>
@@ -45,20 +94,21 @@ export default function Contact() {
 
                             <div className='p-3' >
                                 <div className='email-form'>
-                                    <Form className="p-3 mx-auto text-start">
+                                    <Form className="p-3 mx-auto text-start" ref={form} onSubmit={sendEmail} method="POST">
                                         <Form.Group className="mb-3" controlId="contactForm.ControlInput1">
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type="text" placeholder="" />
+                                        <Form.Control type="text" placeholder="" name="name" />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="contactForm.ControlInput2">
                                         <Form.Label>Email address</Form.Label>
-                                        <Form.Control type="email" placeholder="" />
+                                        <Form.Control type="email" placeholder="" name="email" />
                                         </Form.Group>
                                         <Form.Group className="mb-3" controlId="contactForm.ControlTextarea1">
                                         <Form.Label>Message</Form.Label>
-                                        <Form.Control as="textarea" rows={3} />
+                                        <Form.Control as="textarea" rows={3} name="message" />
                                         </Form.Group>
-                                        <Button className='w-100 button-black' variant="dark">Submit</Button>
+                                        <div ref={recaptchaContainerRef} id="recaptcha-container"></div>
+                                        <Button className='w-100 button-black mt-3' variant="dark" type="submit">Submit</Button>
                                     </Form>
                                 </div>
                             </div>
